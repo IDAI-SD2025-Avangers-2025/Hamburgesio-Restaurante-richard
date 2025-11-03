@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form action="" id="calcularPrecio">
+
+        <div>
+            <label for="cantidad">
+                cantidad
+                <input type="number" 
+                    name="cantidad" id="cantidad"
+                    value="1">
+            </label>
+        </div>
+
+        <div>
+            <h2>Tamaño</h2>
+            <label for="chico">
+                <input type="radio" name="tam" id="chico">
+                Chico
+            </label>
+            <br>
+            
+            <label for="chico">Mediano</label>
+            <input type="radio" name="tam" id="mediano">
+            <br>
+            
+            <label for="chico">Grande</label>
+            <input type="radio" name="tam" id="grande">
+            <br>
+            
+        </div>
+
+        <div>
+            <h2>Tipo de Pan</h2>
+            <label for="integral">
+                <input type="radio" name="pan" id="integral">
+                Integral
+            </label>
+            <br>
+            <label for="blanco">
+                <input type="radio" name="pan" id="blanco">
+                Blanco
+            </label>
+            <br>        
+            <label for="papa">
+                <input type="radio" name="pan" id="papa">
+                Papa
+            </label>
+            <br>        
+            <label for="parmesano">
+                <input type="radio" name="pan" id="parmesano">
+                Parmesano
+            </label>
+            <br>        
+        </div>
+
+        <div>
+            <h2>Ingredientes</h2>
+            <label for="tomate">
+                Tomate
+                <input type="checkbox" name="tomate" id="tomate">
+            </label>
+            <br>
+            <label for="cebolla">
+                Cebolla
+                <input type="checkbox" name="cebolla" id="cebolla">
+            </label>
+            <br>
+            <label for="aguacate">
+                Aguacate
+                <input type="checkbox" name="aguacate" id="aguacate">
+            </label>
+            <br>
+            <label for="jamon">
+                Jamón
+                <input type="checkbox" name="jamon" id="jamon">
+            </label>
+            <br>
+            <label for="tocino">
+                Tocino
+                <input type="checkbox" name="tocino" id="tocino">
+            </label>
+            <br>
+            <label for="pina">
+                Piña
+                <input type="checkbox" name="pina" id="pina">
+            </label>
+            <br>
+            <label for="queso-blanco">
+                Queso Blanco
+                <input type="checkbox" name="queso-blanco" id="queso-blanco">
+            </label>
+            <br>
+            <label for="queso-amarillo">
+                Queso Amarillio
+                <input type="checkbox" name="queso-amarillo" id="queso-amarillo">
+            </label>
+            <br>
+            <label for="champiniones">
+                Champiñones
+                <input type="checkbox" name="champiniones" id="champiniones">
+            </label>
+            <br>
+            <label for="salami">
+                Salami
+                <input type="checkbox" name="salami" id="salami">
+            </label>
+        </div>
+
+        <div>
+            <label for="combo">
+                ¿Quieres hacerlo combo (incluye Refresco y Papas)?
+                <select name="combo" id="combo">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <button type="button" onclick="Calcular()">Precio</button>
+            <br>
+            <label for="total">
+                Total a Pagar
+                <input type="number" name="total" id="total" readonly>
+            </label>
+        </div>
+
+
+    </form>
+
+
+    <script src="calculos.js"></script>
+</body>
+</html>
