@@ -1,16 +1,9 @@
 var formulario = document.getElementById("calcularPrecio");
 
 function Calcular() {
-    //alert("Si funciona mi botón");
-
-    var cantidad = document.getElementById("cantidad").value;
-    
-    //var tamanio = document.getElementsByName("tam").value;
-
-    //var tamChico = document.getElementById("chico");
-
+    var cantidad = formulario.cantidad.value;
     var tamanio = formulario.tam.value;
-    alert(tamanio);
+    var pan = formulario.pan.value;
 
     var total = 0;
 
@@ -26,6 +19,87 @@ function Calcular() {
     {
         total = 200;
     }
+    else {
+        alert("Por favor selecciona un tamaño");
+        return;
+    }
 
-    formulario.total.value = total;
+    if (pan == "integral")
+    {
+        total = total + 0;
+    }
+    else if (pan == "blanco")
+    {
+        total = total + 20;
+    }
+    else if(pan == "papa")
+    {
+        total = total + 50;
+    }
+    else if(pan == "parmesano")
+    {
+        total = total + 60;
+    }
+    else {
+        alert("Por favor selecciona un tipo de pan");
+        return;
+    }
+
+
+    if (formulario.tomate.checked) 
+    {
+        total += 10;
+    }
+
+    if (formulario.cebolla.checked) 
+    {
+        total += 10;
+    }
+
+    if (formulario.aguacate.checked)  
+    {
+        total += 10;
+    }
+
+    if (formulario.jamon.checked) 
+    {
+        total += 10;
+    }
+
+    if (formulario.tocino.checked) 
+    {
+        total += 10;
+    }
+
+    if (formulario.pina.checked) 
+    {
+        total += 10;
+    }
+
+    if (formulario.quesoBlanco.checked) 
+    {
+        total += 10;
+    }
+
+    if (formulario.quesoAmarillo.checked) 
+    {
+        total += 10;
+    }
+
+    if (formulario.champiniones.checked) 
+    {
+        total += 10;
+    }
+
+    if (formulario.salami.checked) 
+    {
+        total += 10;
+    }
+
+    if (formulario.combo.value == "Si")
+    {
+        total += 75;
+    }
+    
+    formulario.total.value = total * cantidad;
 }
