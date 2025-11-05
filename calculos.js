@@ -96,7 +96,7 @@ function Calcular() {
         total += 10;
     }
 
-    if (formulario.combo.value == "Si")
+    if (formulario.combo.value == "si")
     {
         total += 75;
     }
