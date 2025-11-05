@@ -16,12 +16,7 @@
 
         <!-- Hero Section para imagen principal -->
         <section class="hero">
-            <!-- <div>
-                <h2>Imagen Principal de la Tienda</h2>
-                <p>Aquí va tu imagen destacada</p>
-            </div> -->
             <iframe width="560" height="315" src="https://www.youtube.com/embed/cQnUh4sZ_MU?si=SIi1PQpBNo3k2GFz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
         </section>
 
         <!-- Sidebar para imágenes adicionales -->
@@ -132,13 +127,23 @@
             </div>
 
             <div class="total">
-                <button type="button" onclick="Calcular()">Calcular Precio</button>
+                <button type="button" onclick="procesarPedido()">Procesar</button>
                 <label for="total">
-                    Total a Pagar
+                    Precio
                     <input type="number" name="total" id="total" readonly>
                 </label>
             </div>
         </form>
+
+        <!-- Carrito -->
+        <aside class="carrito">
+            <h3>🧾 Tu Pedido</h3>
+            <div id="items-carrito"></div>
+            <div class="total-carrito">
+                <strong>Total: $<span id="total-carrito">0</span> MXN</strong>
+            </div>
+            <button type="button" onclick="limpiarCarrito()" class="btn-limpiar">Limpiar Carrito</button>
+        </aside>
 
         <!-- Galería adicional -->
         <aside class="gallery">
